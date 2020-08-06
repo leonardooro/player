@@ -1,0 +1,314 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>iCast - Soutcast & Icecast Radio Web Player</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/icast.min.css" rel="stylesheet" type="text/css">
+<link href="demo_files/demo.css" rel="stylesheet" type="text/css">
+<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+</head>
+<body>
+<div class="top-panel-wpr">
+	<div class="main-wpr">
+	<img src="demo_files/logo.png" class="logo">
+		<div class="top-panel-links">
+			<div class="examples-btn"><a href="#examples">Examples</a></div>
+			<div class="buy-btn"><a href="https://codecanyon.net/user/shoutcastapps/portfolio" target="_blank">Buy Now</a></div>
+		</div>
+	</div>
+</div>
+<div class="banner-wpr">
+	<video autoplay muted loop id="myVideo">
+	  <source src="demo_files/bg.mp4" type="video/mp4">
+	  Your browser does not support HTML5 video.
+	</video>
+	<div class="banner-bg"></div>
+		<div class="banner-ctr">
+			<div class="banner-title1">iCAST RADIO WEB PLAYER</div>
+			<div class="banner-title2">Shoutcast & Icecast - HTML5, CSS, jQuery. Lightweight, Animated and Mobile Ready! </div>
+			<div class="banner-button"><a href="#examples">EXAMPLES</a></div>
+		</div>
+	</div>
+
+<div class="main-wpr">
+	<br><br><br>
+	<h2>Features</h2>
+	<br>
+	<div class="features-wpr">
+		<div class="features-icon fa icon-servers"></div>
+		<div class="features-title">Shoutcast & Icecast</div>
+		<p>
+			Compatible with both Shoutcast 1/2 & Icecast 2.
+		</p>
+	</div>
+	
+	<div class="features-wpr">
+		<div class="features-icon fa icon-nativecode"></div>
+		<div class="features-title">Native Code</div>
+		<p>
+			Built in pure HTML5, CSS, jQuery. No Server-side script needed.
+		</p>
+	</div>
+	
+	<div class="features-wpr">
+		<div class="features-icon fa icon-fastdata"></div>
+		<div class="features-title">Fast Data Gathering</div>
+		<p>
+			Direct requests to Server via JSON. Fast and automatic update.
+		</p>
+	</div>
+	
+	<div class="features-wpr">
+		<div class="features-icon fa icon-responsive"></div>
+		<div class="features-title">Responsive Design</div>
+		<p>
+			Optimized to look great on Desktop, Tablet and Phone!
+		</p>
+	</div>
+	
+	<div class="features-wpr">
+		<div class="features-icon fa icon-artwork"></div>
+		<div class="features-title">Album Artwork</div>
+		<p>
+			iTunes API is used to retrieve all the album artwork.
+		</p>
+	</div>
+	
+	<div class="features-wpr">
+		<div class="features-icon fa icon-history"></div>
+		<div class="features-title">Song History</div>
+		<p>
+			Display the last songs played on your radio station.
+		</p>
+	</div>
+	
+	<div class="features-wpr">
+		<div class="features-icon fa icon-animated"></div>
+		<div class="features-title">Animated</div>
+		<p>
+			Scrolling songtitle effect and album cover animation!
+		</p>
+	</div>
+	
+	<div class="features-wpr">
+		<div class="features-icon fa icon-volume"></div>
+		<div class="features-title">Smart Volume</div>
+		<p>
+			Volume slider on desktop and mute/unmute button on mobile.
+		</p>
+	</div>
+	
+	<div class="features-wpr">
+		<div class="features-icon fa icon-listeners"></div>
+		<div class="features-title">Current Listeners</div>
+		<p>
+			Show your radio current listeners (optional).
+		</p>
+	</div>
+	
+	<div class="features-wpr">
+		<div class="features-icon fa icon-multiple"></div>
+		<div class="features-title">Multiple Instances</div>
+		<p>
+			Play more than one stream on the same page.
+		</p>
+	</div>
+	
+	<div class="features-wpr">
+		<div class="features-icon fa icon-share"></div>
+		<div class="features-title">Social Share</div>
+		<p>
+			Share easily your Radio on Facebook & Twitter.
+		</p>
+	</div>
+	
+	<div class="features-wpr">
+		<div class="features-icon fa icon-updates"></div>
+		<div class="features-title">Support & Updates</div>
+		<p>
+			100% Guaranteed support, updates and improvements.
+		</p>
+	</div>
+	
+</div>
+
+<div class="main-wpr">
+	<h2>Settings</h2>
+		<table>
+			<tr>
+				<th>Setting</th>
+				<th>Description</th>
+				<th>Value</th>
+				<th>Type</th>
+			</tr>
+			<tr>
+				<td>URL:</td>
+				<td>URL to your radio stream</td>
+				<td>http://ip:port</td>
+				<td>String</td>
+			</tr>
+			<tr>
+				<td class="td-set">version:</td>
+				<td>Version of Shoutcast (1/2) or Icecast</td>
+				<td>1, 2, icecast</td>
+				<td>String</td>
+			</tr>
+			<tr>
+				<td>stream_id:</td>
+				<td>The stream id of your DNAS 2 Server</td>
+				<td>1, 2, 3, etc..</td>
+				<td>Integer</td>
+			</tr>
+			<tr>
+				<td>mount_point:</td>
+				<td>Mount Point of your Icecast stream</td>
+				<td>path/to/stream</td>
+				<td>String</td>
+			</tr>
+			<tr>
+				<td>type:</td>
+				<td>Used to correct play of DNAS 1 Stream (don't change it)</td>
+				<td>/;type=mp3</td>
+				<td>String</td>
+			</tr>
+			<tr>
+				<td>streampath:</td>
+				<td>The stream path to your DNAS 2 Server</td>
+				<td>/stream?icy=http</td>
+				<td>String</td>
+			</tr>
+			<tr>
+				<td>enable_cors:</td>
+				<td>For Shoutcast v2 users. Set to true if your website is https</td>
+				<td>true, false</td>
+				<td>Boolean</td>
+			</tr>
+			<tr>
+				<td>cors:</td>
+				<td>Cors proxy (don't touch it)</td>
+				<td>https://shoutcastapps.herokuapp.com</td>
+				<td>String</td>
+			</tr>
+			<tr>
+				<td>artwork:</td>
+				<td>Display album artwork. If set to false, logo will be shown.</td>
+				<td>true, false</td>
+				<td>Boolean</td>
+			</tr>
+			<tr>
+				<td>logo:</td>
+				<td>This image will be used as album cover fallback</td>
+				<td>pathto/your/logo.jpg</td>
+				<td>String</td>
+			</tr>
+			<tr>
+				<td>servertitle:</td>
+				<td>Shoutcast v1 Server Title</td>
+				<td>My Radio Title</td>
+				<td>String</td>
+			</tr>
+			<tr>
+				<td>show_listeners:</td>
+				<td>Show/Hide current listeners</td>
+				<td>true, false</td>
+				<td>Boolean</td>
+			</tr>
+			<tr>
+				<td>src:</td>
+				<td>Used for play/pause function (leave it blank)</td>
+				<td>none</td>
+				<td>Empty</td>
+			</tr>
+			<tr>
+				<td>volume:</td>
+				<td>Defines the initial volume level</td>
+				<td>0.01 - 1</td>
+				<td>Integer</td>
+			</tr>
+			<tr>
+				<td>autoplay:</td>
+				<td>Play radio stream on page load</td>
+				<td>true, false</td>
+				<td>Boolean</td>
+			</tr>
+		</table>
+</div>
+
+<div class="main-wpr" style="text-align: left; font-size: 18px;">
+	<br><br>
+	<h2>Installation</h2>
+	First make sure jQuery is include, if not, include it
+	<pre>&lt;script src="https://code.jquery.com/jquery-3.0.0.min.js"&gt;&lt;/script&gt;</pre>
+	Then include iCast files
+	<pre>&lt;link href="css/icast.min.css" type="text/css" rel="stylesheet"&gt
+&lt;script src="js/icast.min.js"&gt;&lt;/script&gt;</pre>
+	Add a parent div to the body of your page, wherever you want the player to appear
+	<pre>&lt;div class="icast" id="stream1"&gt;&lt;/div&gt;</pre>
+	Finally call the script on your html page, at the end of the body tag
+	<pre>
+&lt;script&gt;
+    $("#stream1").icast({
+        URL: "http://ip:port",
+        version: "2"
+    })
+&lt;/script&gt;</pre>
+</div>
+
+<div class="main-wpr">
+	<h2 id="examples">Examples</h2>
+	
+	<div style="max-width: 440px; text-align: left; font-size: 18px;">
+	Shoutcast v2 Server<br><br>
+		<div class="icast" id="stream1"></div>
+	</div>
+	<pre>
+&lt;script&gt;
+    $("#stream1").icast({
+        URL: "http://s01.webradio-solutionscast.com:4060",
+        version: "2"
+    })
+&lt;/script&gt;</pre>
+<br><br>
+<div style="max-width: 440px; text-align: left; font-size: 18px;">
+	Icecast Server<br><br>
+		<div class="icast" id="stream2"></div>
+	</div>
+	<pre>
+&lt;script&gt;
+    $("#stream2").icast({
+        URL: "http://149.56.195.94:8416",
+        version: "icecast",
+        mount_point: "autodj",
+        show_listeners: false
+    })
+&lt;/script&gt;</pre>
+</div>
+<div class="main-wpr" style="font-size: 24px">
+	For support, customization or freelance work please contact me at
+	<div class="contact-btn">shoutcastapps@gmail.com</div>
+</div>
+<div class="footer-wpr">
+	<div class="footer-copy">©2018 by <a href="http://www.shoutcastapps.com" target="a_blank">ShoutcastApps</a> - All rights reserved.</div>
+</div>
+
+<script src="js/icast.min.js"></script>
+<script>
+    $("#stream1").icast({
+	    URL: "http://radio2.suaradionanet.net:10839",
+		version: "2",
+    })
+</script>
+
+<script>
+    $("#stream2").icast({
+	    URL: "http://radio2.suaradionanet.net:10839",
+		version: "icecast",
+		mount_point: "autodj",
+		show_listeners: false,
+    })
+</script>
+
+
+</body>
+</html>
